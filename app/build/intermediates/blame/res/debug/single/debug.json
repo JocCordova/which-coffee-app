@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_jar_fragment.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\jar_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\anim\\slide_out_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_empty_page.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\empty_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vader.jpg.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable-v24\\vader.jpg"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_coffee.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_add_coffee.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\anim\\slide_in_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_grogu.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable-v24\\grogu.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_jar_collection_object.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\jar_collection_object.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_review_fragment.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\review_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_coffee_fragment.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\coffee_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_coffee.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_coffee.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_view_pager.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\item_view_pager.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_jar.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_add_jar.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_coffeechartheader_style.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable\\coffeechartheader_style.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_mando.jpg.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable-v24\\mando.jpg"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_coffeechart_style.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable\\coffeechart_style.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_yoda.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\drawable-v24\\yoda.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\layout_coffee_collection_object.xml.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\coffee_collection_object.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    }
+]

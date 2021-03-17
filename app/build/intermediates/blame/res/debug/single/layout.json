@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_coffee.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_coffee.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\coffee_fragment.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\coffee_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\coffee_collection_object.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\coffee_collection_object.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_view_pager.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\item_view_pager.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\jar_collection_object.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\jar_collection_object.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\review_fragment.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\review_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_coffee.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_add_coffee.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\empty_page.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\empty_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\jar_fragment.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\jar_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_jar.xml",
+        "source": "C:\\Users\\JoseAndres\\Desktop\\Coding Shit\\Projects\\which-coffee-app\\app\\src\\main\\res\\layout\\activity_add_jar.xml"
+    }
+]
