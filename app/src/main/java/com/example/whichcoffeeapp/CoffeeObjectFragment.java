@@ -34,8 +34,8 @@ public class CoffeeObjectFragment extends Fragment {
         Bundle args = getArguments();
         String cName = args.getString(CNAME);
         String origin = args.getString(ORIGIN);
-        String process = args.getString(RDATE);
-        String rDate = args.getString(PROCESS);
+        String process = args.getString(PROCESS);
+        String rDate = args.getString(RDATE);
         int position = args.getInt(POSITION);
 
 

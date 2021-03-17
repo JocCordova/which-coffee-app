@@ -40,7 +40,7 @@ public class ReviewObjectFragment extends Fragment {
 
 
         reviewMethod.setText(rMethod);
-        
+
         reviewDescription.setText("• "+rDescription);
 
         coffeeChart.setOnClickListener(new View.OnClickListener() {
