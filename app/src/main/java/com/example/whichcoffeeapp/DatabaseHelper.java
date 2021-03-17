@@ -197,4 +197,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String []args = {Integer.toString(coffeeId)};
         db.delete("COFFEE", "ID = ?",args);
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public boolean insertReviewValues(String coffeeId, String rMethod, String rDescription) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("METHOD", rMethod);
+        contentValues.put("DESCRIPTION", rDescription);
+        contentValues.put("CoffeeID", coffeeId);
+
+        Long result = db.insert("REVIEW", null, contentValues);
+        if (result == -1) {
+            return false;
+        }
+        return true;
+    }
+    public boolean updateReviewValues(String rId,String rMethod, String rDescription) {
+        String [] args= {rId};
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("METHOD", rMethod);
+        contentValues.put("DESCRIPTION", rDescription);
+
+
+        int result = db.update("REVIEW", contentValues,"ID = ?",args );
+        if (result == -1||result == 0) {
+            return false;
+        }
+        return true;
+    }
+
+    public Cursor getReviewsFromCoffeeId(int coffeeId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String []args = {Integer.toString(coffeeId)};
+        Cursor res = db.rawQuery("SELECT ID,Method,Description FROM REVIEW WHERE CoffeeID = ? ORDER BY ID ASC ", args);
+        return res;
+    }
+    public Cursor countReviewOfCoffeeId(int coffeeId) {
+        String []args = {Integer.toString(coffeeId)};
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT COUNT(ID) FROM REVIEW WHERE CoffeeID = ? ", args);
+        return res;
+    }
+
+    public Cursor getReviewFromReviewId(int reviewId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String []args = {Integer.toString(reviewId)};
+        Cursor res = db.rawQuery("SELECT ID,Method,Description FROM REVIEW WHERE ID = ? ORDER BY ID ASC ", args);
+        return res;
+    }
+
+    public void deleteReviewById(int reviewId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String []args = {Integer.toString(reviewId)};
+        db.delete("REVIEW", "ID = ?",args);
+    }
 }

@@ -10,4 +10,6 @@
     <string name="amount">Amount</string>
     <string name="delete">Delete</string>
     <string name="coffeeAmount">Amount</string>
+    <string name="reviewDescription">Description</string>
+    <string name="reviewMethod">Method</string>
 </resources>
