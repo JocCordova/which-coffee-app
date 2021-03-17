@@ -1,7 +1,5 @@
 package com.example.whichcoffeeapp;
 
-
-
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,37 +12,44 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-public class AddJar extends AppCompatActivity {
+public class AddReview extends AppCompatActivity {
 
     DatabaseHelper myDb;
-    EditText editCoffeeJar, editCoffeeAmount;
+    EditText editReviewMethod, editReviewDescription;
     TextView coffeeName;
 
-    Button btnAddData,btnCancel,btnDelete;
+    Button btnAddData,btnCancel;
     private int[] colorArray = new int[]{R.color.one, R.color.two, R.color.three ,R.color.four,R.color.five};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_jar);
+        setContentView(R.layout.activity_add_review);
+
         int coffeeId = Integer.parseInt(getIntent().getStringExtra("COFFEE_ID"));
+
+
         myDb = new DatabaseHelper(this);
 
-        editCoffeeJar = findViewById(R.id.editText_coffeeJar);
-        editCoffeeAmount = findViewById(R.id.editText_coffeeAmount);
+        editReviewMethod = findViewById(R.id.editText_reviewMethod);
+        editReviewDescription = findViewById(R.id.editText_reviewDescription);
         coffeeName = findViewById(R.id.coffeeName);
 
         btnAddData = findViewById(R.id.button_add);
         btnCancel = findViewById(R.id.button_cancel);
-        btnDelete = findViewById(R.id.button_delete);
+
+
+
+
 
 
 
         fillInfo(coffeeId);
         cancelEdit();
-        addData(coffeeId);
+        addReview(coffeeId);
+
     }
+
 
     private void cancelEdit() {
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -56,8 +61,9 @@ public class AddJar extends AppCompatActivity {
         );
     }
 
-    public void addData(int coffeeId) {
+    public void addReview(int coffeeId) {
         String id = Integer.toString(coffeeId);
+
         btnAddData.setOnClickListener(
                 new View.OnClickListener() {
 
@@ -65,13 +71,13 @@ public class AddJar extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        boolean isInserted = myDb.insertJarValues(id, editCoffeeJar.getText().toString(), editCoffeeAmount.getText().toString());
+                        boolean isInserted = myDb.insertReviewValues(id,editReviewMethod.getText().toString(), editReviewDescription.getText().toString());
                         if (!isInserted) {
-                            Toast.makeText(AddJar.this, "Please fill all fields", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AddReview.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                             return;
                         }
                         if (isInserted) {
-                            Toast.makeText(AddJar.this, "Jar: "+ editCoffeeJar.getText().toString() + " filled!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddReview.this, editReviewMethod.getText().toString() + " review Saved", Toast.LENGTH_SHORT).show();
 
                             finish();
 
@@ -81,32 +87,27 @@ public class AddJar extends AppCompatActivity {
         );
     }
 
-    public void fillInfo(int pos){
-        String [] names = getTitles(viewLog(pos));
+    public void fillInfo(int coffeId){
+        String cName = getCoffeeName(viewCoffeeLog(coffeId));
         int colorPos = (int)(Math.random() * 5);
 
-        coffeeName.setText(names[0]);
+        coffeeName.setText(cName);
         coffeeName.setBackgroundResource(colorArray[colorPos]);
     }
 
-    public Cursor viewLog(int pos) {
+    public Cursor viewCoffeeLog(int pos) {
         Cursor res = myDb.getCoffeeById(pos);
         res.moveToFirst();
         return res;
     }
 
-    public String[] getTitles(Cursor res) {
-        String cName="",cOrigin="",cProcess="",cRoastDate="";
-
+    public String getCoffeeName(Cursor res) {
+        String cName="";
         if( res != null && res.moveToFirst() ){
             cName = res.getString(0);
-            cOrigin = res.getString(1);
-            cProcess = res.getString(2);
-            cRoastDate = res.getString(3);
         }
         res.close();
-        String [] names = {cName,cOrigin,cProcess,cRoastDate};
-        return names;
+        return cName;
     }
-}
 
+}

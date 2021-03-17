@@ -64,13 +64,6 @@ public class JarFragment extends Fragment {
             }
         });
     }
-    public int countJars(int coffeeId) {
-        Cursor res = myDb.countJarsOfCoffeeId(coffeeId);
-        res.moveToFirst();
-        int sum = res.getInt(0);
-        res.close();
-        return sum;
-    }
     public Cursor viewJars(int pos) {
         Cursor res = myDb.getJarsFromCoffeeId(pos);
         res.moveToFirst();

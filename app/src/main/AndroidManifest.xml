@@ -14,6 +14,8 @@
         <activity android:name="com.example.whichcoffeeapp.OpenCoffee"/>
         <activity android:name="com.example.whichcoffeeapp.AddJar"/>
         <activity android:name="com.example.whichcoffeeapp.EditJar"/>
+        <activity android:name="com.example.whichcoffeeapp.AddReview"/>
+        <activity android:name="com.example.whichcoffeeapp.EditReview"/>
         <activity android:name="com.example.whichcoffeeapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
