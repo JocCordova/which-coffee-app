@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Which Coffee App</string>
+    <string name="coffeeName">Coffee Name</string>
+    <string name="coffeeOrigin">Origin</string>
+    <string name="process">Process</string>
+    <string name="roastDate">Roast Date</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="coffeeJar">Coffee Jar</string>
+    <string name="amount">Amount</string>
+    <string name="delete">Delete</string>
+    <string name="coffeeAmount">Amount</string>
+</resources>

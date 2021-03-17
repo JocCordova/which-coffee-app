@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8F583B</color>
+    <color name="colorPrimaryDark">#5A3724</color>
+    <color name="colorAccent">#ED4726</color>
+    <color name="one">#ffd46b</color>
+    <color name="two">#ff6262</color>
+    <color name="three">#ffb3cb</color>
+    <color name="four">#00c36f</color>
+    <color name="five">#95d0ff</color>
+    <color name="delete">#B68383</color>
+    <color name="add">#83B68A</color>
+
+</resources>
