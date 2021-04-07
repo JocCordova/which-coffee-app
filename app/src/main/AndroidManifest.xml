@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.whichcoffeeapp.AddCoffee"/>
-        <activity android:name="com.example.whichcoffeeapp.EditCoffee"/>
-        <activity android:name="com.example.whichcoffeeapp.OpenCoffee"/>
-        <activity android:name="com.example.whichcoffeeapp.AddJar"/>
-        <activity android:name="com.example.whichcoffeeapp.EditJar"/>
-        <activity android:name="com.example.whichcoffeeapp.AddReview"/>
-        <activity android:name="com.example.whichcoffeeapp.EditReview"/>
+        <activity android:name="com.example.whichcoffeeapp.coffee.AddCoffee"/>
+        <activity android:name="com.example.whichcoffeeapp.coffee.EditCoffee"/>
+        <activity android:name="com.example.whichcoffeeapp.coffee.OpenCoffee"/>
+        <activity android:name="com.example.whichcoffeeapp.jar.AddJar"/>
+        <activity android:name="com.example.whichcoffeeapp.jar.EditJar"/>
+        <activity android:name="com.example.whichcoffeeapp.review.AddReview"/>
+        <activity android:name="com.example.whichcoffeeapp.review.EditReview"/>
         <activity android:name="com.example.whichcoffeeapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

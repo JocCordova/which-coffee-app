@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.jar;
 
 import android.content.DialogInterface;
 import android.database.Cursor;
@@ -13,6 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.whichcoffeeapp.DatabaseHelper;
+import com.example.whichcoffeeapp.R;
 
 public class EditJar extends AppCompatActivity {
 

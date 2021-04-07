@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.jar;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.whichcoffeeapp.DatabaseHelper;
 
 public class JarAdapter extends FragmentStateAdapter {
     DatabaseHelper myDb;

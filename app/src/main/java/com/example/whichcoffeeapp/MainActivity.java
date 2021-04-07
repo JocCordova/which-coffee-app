@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.whichcoffeeapp.coffee.CoffeeFragment;
+
 public class MainActivity extends AppCompatActivity {
     ViewPager2 vPager;
 
@@ -20,10 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDb = new DatabaseHelper(this);
-        //vPager = findViewById(R.id.ViewPager);
+
         noCoffee = findViewById(R.id.noCoffee);
-       // adapter = new ViewPagerAdapter();
-      //  vPager.setAdapter(adapter);
+
         Bundle bundle = new Bundle();
         bundle.putInt("id", 0);
 
