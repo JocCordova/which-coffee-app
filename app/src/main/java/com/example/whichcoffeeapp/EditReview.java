@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class EditReview extends AppCompatActivity {
 
     DatabaseHelper myDb;
     EditText editReviewMethod, editReviewDescription;
+    RatingBar ratingBar;
     TextView coffeeName;
 
     Button btnAddData,btnCancel,btnDelete;
@@ -35,6 +37,8 @@ public class EditReview extends AppCompatActivity {
 
         editReviewMethod = findViewById(R.id.editText_reviewMethod);
         editReviewDescription = findViewById(R.id.editText_reviewDescription);
+        ratingBar = findViewById(R.id.ratingBar);
+
         coffeeName = findViewById(R.id.coffeeName);
 
         btnAddData = findViewById(R.id.button_add);
@@ -72,7 +76,7 @@ public class EditReview extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        boolean isInserted = myDb.updateReviewValues(String.valueOf(reviewId),editReviewMethod.getText().toString(), editReviewDescription.getText().toString());
+                        boolean isInserted = myDb.updateReviewValues(String.valueOf(reviewId),editReviewMethod.getText().toString(), editReviewDescription.getText().toString(),Integer.toString(ratingBar.getNumStars()));
                         if (!isInserted) {
                             Toast.makeText(EditReview.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                             return;

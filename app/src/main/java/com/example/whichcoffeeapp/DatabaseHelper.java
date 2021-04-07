@@ -35,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "CoffeeID," +
                 "Description VARCHAR(500)," +
                 "Method VARCHAR(50)," +
+                "Stars VARCHAR(5) NOT NULL," +
                 "FOREIGN KEY(CoffeeID) REFERENCES COFFEE(ID)" +
                 "ON DELETE CASCADE" +
                 " ON UPDATE CASCADE )");
@@ -208,7 +209,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public boolean insertReviewValues(String coffeeId, String rMethod, String rDescription) {
+    public boolean insertReviewValues(String coffeeId, String rMethod, String rDescription, String stars) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -216,6 +217,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("METHOD", rMethod);
         contentValues.put("DESCRIPTION", rDescription);
         contentValues.put("CoffeeID", coffeeId);
+        contentValues.put("Stars", stars);
 
         Long result = db.insert("REVIEW", null, contentValues);
         if (result == -1) {
@@ -223,7 +225,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return true;
     }
-    public boolean updateReviewValues(String rId,String rMethod, String rDescription) {
+    public boolean updateReviewValues(String rId,String rMethod, String rDescription, String stars) {
         String [] args= {rId};
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -231,6 +233,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         contentValues.put("METHOD", rMethod);
         contentValues.put("DESCRIPTION", rDescription);
+        contentValues.put("Stars", stars);
 
 
         int result = db.update("REVIEW", contentValues,"ID = ?",args );
