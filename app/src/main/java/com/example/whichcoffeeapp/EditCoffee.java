@@ -14,6 +14,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class EditCoffee extends AppCompatActivity {
     DatePickerDialog picker;
     Button btnAddData,btnCancel, btnDelete;
     String coffeeName;
+    int colorId;
     private int[] colorArray = new int[]{R.color.one, R.color.two, R.color.three ,R.color.four,R.color.five};
 
     @Override
@@ -59,6 +61,7 @@ public class EditCoffee extends AppCompatActivity {
 
 
         setLiveTitle();
+        colorPicker();
         startAutocomplete();
         fillInfo(CoffeeId);
         datePicker();
@@ -68,6 +71,19 @@ public class EditCoffee extends AppCompatActivity {
         deleteCoffee(CoffeeId);
     }
 
+    private void colorPicker() {
+        liveCoffeeName.setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        pickColor();
+                    }
+                }
+
+        );
+    }
+
     private void startAutocomplete() {
         String[] process_list = getResources().getStringArray(R.array.process_list);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -75,6 +91,26 @@ public class EditCoffee extends AppCompatActivity {
         editProcess.setAdapter(adapter);
     }
 
+    private void pickColor(){
+        CustomColorDialog colorPicker = new CustomColorDialog(this);
+
+        colorPicker.show();
+        colorPicker.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        colorPicker.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                colorId = colorPicker.getColor();
+                colorPicked();
+            }
+        });
+
+    }
+
+    private void colorPicked(){
+        int[] color_list = getResources().getIntArray(R.array.color_list);
+        liveCoffeeName.setBackgroundColor(color_list[colorId]);
+    }
     private void cancelEdit() {
         btnCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -102,9 +138,13 @@ public class EditCoffee extends AppCompatActivity {
                         if (isInserted) {
                             Toast.makeText(EditCoffee.this, editCoffeeName.getText().toString() + " Updated", Toast.LENGTH_LONG).show();
 
+
+                            boolean isColorChanged = myDb.updateColorValues(id,colorId);
+
                             Intent returnIntent = new Intent();
                             setResult(RESULT_OK,returnIntent);
                             finish();
+
 
                         }
                     }

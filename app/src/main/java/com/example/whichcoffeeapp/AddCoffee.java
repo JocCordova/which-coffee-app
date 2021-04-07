@@ -1,6 +1,7 @@
 package com.example.whichcoffeeapp;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,6 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ public class AddCoffee extends AppCompatActivity {
     AutoCompleteTextView editProcess;
     DatePickerDialog picker;
     Button btnAddData;
+    int colorId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +50,23 @@ public class AddCoffee extends AppCompatActivity {
 
 
         setLiveTitle();
+        colorPicker();
         startAutocomplete();
         datePicker();
         AddData();
+    }
+
+    private void colorPicker() {
+        liveCoffeeName.setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        pickColor();
+                        }
+                    }
+
+        );
     }
 
     private void startAutocomplete() {
@@ -59,6 +76,26 @@ public class AddCoffee extends AppCompatActivity {
         editProcess.setAdapter(adapter);
     }
 
+    private void pickColor(){
+        CustomColorDialog colorPicker = new CustomColorDialog(this);
+
+        colorPicker.show();
+        colorPicker.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        colorPicker.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                colorId = colorPicker.getColor();
+                colorPicked();
+            }
+        });
+
+    }
+
+    private void colorPicked(){
+        int[] color_list = getResources().getIntArray(R.array.color_list);
+        liveCoffeeName.setBackgroundColor(color_list[colorId]);
+    }
 
     public void AddData() {
         btnAddData.setOnClickListener(
@@ -81,7 +118,7 @@ public class AddCoffee extends AppCompatActivity {
                             editRoastDate.setText(null);
                             finish();
 
-
+                        boolean colorIsInserted = myDb.insertColor(myDb.getLastInsertedCoffeeId(),colorId);
 
                         }
                     }

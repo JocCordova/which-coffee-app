@@ -47,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " ON UPDATE CASCADE )");
 
         db.execSQL("CREATE TABLE Color(CoffeeID INTEGER PRIMARY KEY," +
-                "Color VARCHAR(10) DEFAULT 'one'," +
+                "Color INTEGER DEFAULT 0," +
                 "FOREIGN KEY(CoffeeID) REFERENCES COFFEE(ID)" +
                 "ON DELETE CASCADE" +
                 " ON UPDATE CASCADE )");
@@ -262,5 +262,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String []args = {Integer.toString(reviewId)};
         db.delete("REVIEW", "ID = ?",args);
+    }
+
+    public int getLastInsertedCoffeeId() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT ID FROM COFFEE ORDER BY ID DESC LIMIT 1 ",null);
+        res.moveToFirst();
+        int id = res.getInt(0);
+        res.close();
+        return id;
+    }
+
+    public boolean insertColor(int lastInsertedCoffeeId, int colorId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("CoffeeId", lastInsertedCoffeeId);
+        contentValues.put("Color", colorId);
+
+        long result = db.insert("COLOR",null,contentValues);
+        if (result == -1||result == 0) {
+            return false;
+        }
+        return true;
+    }
+    public boolean updateColorValues(String cId, int colorId) {
+        String [] args= {cId};
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("color", colorId);
+
+        int result = db.update("COLOR", contentValues,"CoffeeId = ?",args );
+        if (result == -1||result == 0) {
+            return false;
+        }
+        return true;
     }
 }

@@ -3,15 +3,24 @@
     <color name="colorPrimary">#8F583B</color>
     <color name="colorPrimaryDark">#5A3724</color>
     <color name="colorAccent">#ED4726</color>
+    <color name="delete">#B68383</color>
+    <color name="add">#83B68A</color>
+    <color name="btnAdd">#8A83B6</color>
+
     <color name="one">#ffd46b</color>
     <color name="two">#ff6262</color>
     <color name="three">#A491D3</color>
     <color name="four">#4A7C59</color>
     <color name="five">#9FBBCC</color>
     <color name="six">#6C3A5C</color>
-    <color name="delete">#B68383</color>
-    <color name="add">#83B68A</color>
-    <color name="btnAdd">#8A83B6</color>
 
+    <array name="color_list">
+        <item>@color/one</item>
+        <item>@color/two</item>
+        <item>@color/three</item>
+        <item>@color/four</item>
+        <item>@color/five</item>
+        <item>@color/six</item>
+    </array>
 
 </resources>
