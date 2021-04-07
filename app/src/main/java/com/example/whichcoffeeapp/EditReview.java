@@ -46,7 +46,6 @@ public class EditReview extends AppCompatActivity {
 
 
 
-
         fillInfo(coffeeId,reviewId);
         cancelEdit();
         updateReview(reviewId);
@@ -119,6 +118,7 @@ public class EditReview extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 myDb.deleteReviewById(reviewId);
                 Toast.makeText(EditReview.this, "Review Deleted", Toast.LENGTH_SHORT).show();
+
                 finish();
             }});
         builder.show();
