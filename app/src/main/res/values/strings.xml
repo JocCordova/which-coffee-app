@@ -12,6 +12,7 @@
     <string name="coffeeAmount">Amount</string>
     <string name="reviewDescription">Description</string>
     <string name="reviewMethod">Method</string>
+    <string name="roastedBy">Roasted By</string>
 
     <string-array name="process_list">
         <item>Washed</item>

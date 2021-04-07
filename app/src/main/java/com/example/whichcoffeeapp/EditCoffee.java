@@ -29,7 +29,7 @@ public class EditCoffee extends AppCompatActivity {
 
     DatabaseHelper myDb;
     TextView liveCoffeeName;
-    EditText editCoffeeName, editOrigin, editRoastDate;
+    EditText editCoffeeName, editOrigin, editRoastDate, editText_roastedBy;
     AutoCompleteTextView editProcess;
     DatePickerDialog picker;
     Button btnAddData,btnCancel, btnDelete;
@@ -50,6 +50,7 @@ public class EditCoffee extends AppCompatActivity {
         editOrigin = findViewById(R.id.editText_coffeeOrigin);
         editProcess = findViewById(R.id.editText_process);
         editRoastDate = findViewById(R.id.editText_roastDate);
+        editText_roastedBy = findViewById(R.id.editText_roastedBy);
         liveCoffeeName = findViewById(R.id.liveCoffeeName);
 
         btnAddData = findViewById(R.id.button_add);
@@ -130,7 +131,7 @@ public class EditCoffee extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        boolean isInserted = myDb.updateCoffeeValues(id,editOrigin.getText().toString(), editCoffeeName.getText().toString(), editProcess.getText().toString(), editRoastDate.getText().toString());
+                        boolean isInserted = myDb.updateCoffeeValues(id,editOrigin.getText().toString(), editCoffeeName.getText().toString(), editProcess.getText().toString(), editRoastDate.getText().toString(),editText_roastedBy.getText().toString());
                         if (!isInserted) {
                             Toast.makeText(EditCoffee.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                             return;

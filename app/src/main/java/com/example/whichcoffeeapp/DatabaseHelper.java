@@ -68,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public boolean insertCoffeeValues(String origin, String coffeeName, String process, String roastDate) {
+    public boolean insertCoffeeValues(String origin, String coffeeName, String process, String roastDate,String roaster) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -77,6 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("coffeeName", coffeeName);
         contentValues.put("process", process);
         contentValues.put("roastDate", roastDate);
+        contentValues.put("roastedBy", roaster);
 
         Long result = db.insert("COFFEE", null, contentValues);
         if (result == -1) {
@@ -120,7 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean updateCoffeeValues(String id, String origin, String coffeeName, String process, String roastDate) {
+    public boolean updateCoffeeValues(String id, String origin, String coffeeName, String process, String roastDate,String roaster) {
         String [] args= {id};
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -128,6 +129,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("coffeeName", coffeeName);
         contentValues.put("Process", process);
         contentValues.put("roastDate", roastDate);
+        contentValues.put("roastedBy", roaster);
 
         int result = db.update("COFFEE", contentValues,"ID = ?",args );
         if (result == -1||result == 0) {

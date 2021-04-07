@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.089999974" />
 
     <TextView
         android:id="@+id/textView7"
@@ -114,7 +114,32 @@
         app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.100000024" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/roastedBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/editText_roastedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:ems="10"
+        android:hint="@string/roastedBy"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/editText_roastDate" />
 
     <Button
         android:id="@+id/button_add"
@@ -125,7 +150,7 @@
         android:backgroundTint="@color/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/editText_roastDate" />
+        app:layout_constraintTop_toBottomOf="@id/editText_roastedBy" />
     <Button
         android:id="@+id/button_cancel"
         android:layout_width="215dp"
@@ -166,32 +191,32 @@
 
     <TextView
         android:id="@+id/liveCoffeeName"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:gravity="center"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="32sp"
-        android:clickable="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14999998" />
+        app:layout_constraintVertical_bias="0.089999974" />
 
     <TextView
         android:id="@+id/box"
-        android:textAllCaps="true"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/coffeechartheader_style"
+        android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="32sp"
-        android:background="@drawable/coffeechartheader_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14999998" />
+        app:layout_constraintVertical_bias="0.089999974" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
