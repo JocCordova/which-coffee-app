@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.coffee;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.whichcoffeeapp.DatabaseHelper;
+
 public class CoffeeAdapter extends FragmentStateAdapter {
     DatabaseHelper myDb;
-    int lastadded=-1;
-    int skips=0;
+    int colorId;
+
     private FragmentManager mFragmentManager;
 
 
@@ -34,6 +36,9 @@ public class CoffeeAdapter extends FragmentStateAdapter {
         Fragment fragment = new CoffeeObjectFragment();
 
         String values[] = getCoffeeInfo(viewCoffee(coffeeId));
+        try{
+            colorId = myDb.getColorIdByCoffeeId(coffeeId);
+        }catch (Exception e){colorId = 0;}
 
         Bundle bundle = new Bundle();
         bundle.putString("name", values[0]);
@@ -41,6 +46,7 @@ public class CoffeeAdapter extends FragmentStateAdapter {
         bundle.putString("process", values[2]);
         bundle.putString("rDate", values[3]);
         bundle.putInt("position",coffeeId);
+        bundle.putInt("colorId",colorId);
 
         fragment.setArguments(bundle);
         return fragment;
