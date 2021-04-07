@@ -5,9 +5,10 @@
     <color name="colorAccent">#ED4726</color>
     <color name="one">#ffd46b</color>
     <color name="two">#ff6262</color>
-    <color name="three">#ffb3cb</color>
-    <color name="four">#00c36f</color>
-    <color name="five">#95d0ff</color>
+    <color name="three">#A491D3</color>
+    <color name="four">#4A7C59</color>
+    <color name="five">#9FBBCC</color>
+    <color name="six">#6C3A5C</color>
     <color name="delete">#B68383</color>
     <color name="add">#83B68A</color>
     <color name="btnAdd">#8A83B6</color>
