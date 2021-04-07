@@ -28,7 +28,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "Origin VARCHAR(50) NOT NULL CHECK(length(Origin)>0)," +
                 "CoffeeName VARCHAR(50) NOT NULL CHECK(length(CoffeeName)>0)," +
                 "Process VARCHAR(50) NOT NULL CHECK(length(Process)>0)," +
-                "RoastDate DATE NOT NULL CHECK(length(RoastDate)>0))");
+                "RoastDate DATE NOT NULL CHECK(length(RoastDate)>0)," +
+                "RoastedBy VARCHAR(50) NOT NULL CHECK(length(Process)>0))");
 
         db.execSQL("CREATE TABLE REVIEW(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "CoffeeID," +
@@ -39,8 +40,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " ON UPDATE CASCADE )");
 
         db.execSQL("CREATE TABLE JAR(ID INTEGER PRIMARY KEY NOT NULL CHECK(length(ID)>0) ," +
-                "Amount INTEGER NOT NULL CHECK(length(Amount)>0)," +
+                "Amount VARCHAR(5) NOT NULL CHECK(length(Amount)>0)," +
                 "CoffeeID," +
+                "FOREIGN KEY(CoffeeID) REFERENCES COFFEE(ID)" +
+                "ON DELETE CASCADE" +
+                " ON UPDATE CASCADE )");
+
+        db.execSQL("CREATE TABLE Color(CoffeeID INTEGER PRIMARY KEY," +
+                "Color VARCHAR(10) DEFAULT 'one'," +
                 "FOREIGN KEY(CoffeeID) REFERENCES COFFEE(ID)" +
                 "ON DELETE CASCADE" +
                 " ON UPDATE CASCADE )");
