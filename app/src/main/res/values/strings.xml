@@ -12,4 +12,10 @@
     <string name="coffeeAmount">Amount</string>
     <string name="reviewDescription">Description</string>
     <string name="reviewMethod">Method</string>
+
+    <string-array name="process_list">
+        <item>Washed</item>
+        <item>Natural</item>
+        <item>Honey</item>
+    </string-array>
 </resources>

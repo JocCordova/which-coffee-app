@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -22,7 +24,8 @@ public class AddCoffee extends AppCompatActivity {
 
     DatabaseHelper myDb;
     TextView liveCoffeeName;
-    EditText editCoffeeName, editOrigin, editProcess, editRoastDate;
+    EditText editCoffeeName, editOrigin, editRoastDate;
+    AutoCompleteTextView editProcess;
     DatePickerDialog picker;
     Button btnAddData;
 
@@ -44,9 +47,18 @@ public class AddCoffee extends AppCompatActivity {
 
 
         setLiveTitle();
+        startAutocomplete();
         datePicker();
         AddData();
     }
+
+    private void startAutocomplete() {
+        String[] process_list = getResources().getStringArray(R.array.process_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, process_list);
+        editProcess.setAdapter(adapter);
+    }
+
 
     public void AddData() {
         btnAddData.setOnClickListener(
