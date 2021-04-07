@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.coffee;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -22,6 +22,10 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.whichcoffeeapp.CustomColorDialog;
+import com.example.whichcoffeeapp.DatabaseHelper;
+import com.example.whichcoffeeapp.R;
+
 import java.util.Calendar;
 
 
@@ -35,7 +39,8 @@ public class EditCoffee extends AppCompatActivity {
     Button btnAddData,btnCancel, btnDelete;
     String coffeeName;
     int colorId;
-    private int[] colorArray = new int[]{R.color.one, R.color.two, R.color.three ,R.color.four,R.color.five};
+    private int[] color_list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,9 @@ public class EditCoffee extends AppCompatActivity {
 
 
         myDb = new DatabaseHelper(this);
+        try{
+            colorId = myDb.getColorIdByCoffeeId(CoffeeId);
+        }catch (Exception e){colorId = 0;}
 
         editCoffeeName = findViewById(R.id.editText_coffeeName);
         editOrigin = findViewById(R.id.editText_coffeeOrigin);
@@ -58,8 +66,7 @@ public class EditCoffee extends AppCompatActivity {
         btnDelete = findViewById(R.id.button_delete);
         btnDelete.setVisibility(View.VISIBLE);
         btnAddData.setText("Save");
-
-
+        color_list = getResources().getIntArray(R.array.color_list);
 
         setLiveTitle();
         colorPicker();
@@ -109,7 +116,7 @@ public class EditCoffee extends AppCompatActivity {
     }
 
     private void colorPicked(){
-        int[] color_list = getResources().getIntArray(R.array.color_list);
+
         liveCoffeeName.setBackgroundColor(color_list[colorId]);
     }
     private void cancelEdit() {
@@ -241,7 +248,6 @@ public class EditCoffee extends AppCompatActivity {
 
     public void fillInfo(int pos){
         String [] names = getTitles(viewLog(pos));
-        int colorPos = pos-1 % colorArray.length;
 
         coffeeName=names[0];
 
@@ -249,8 +255,8 @@ public class EditCoffee extends AppCompatActivity {
         editOrigin.setText(names[1]);
         editProcess.setText(names[2]);
         editRoastDate.setText(names[3]);
-        colorPos = (int)(Math.random() * 5);
-        liveCoffeeName.setBackgroundResource(colorArray[colorPos]);
+
+        liveCoffeeName.setBackgroundColor(color_list[colorId]);
     }
 
     public Cursor viewLog(int pos) {

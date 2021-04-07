@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.coffee;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,6 +11,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.whichcoffeeapp.DatabaseHelper;
+import com.example.whichcoffeeapp.jar.JarFragment;
+import com.example.whichcoffeeapp.R;
+import com.example.whichcoffeeapp.review.ReviewFragment;
+import com.example.whichcoffeeapp.ViewPagerAdapter;
+
 public class OpenCoffee extends AppCompatActivity {
     ViewPager2 vPager;
     DatabaseHelper myDb;
@@ -19,7 +25,8 @@ public class OpenCoffee extends AppCompatActivity {
     ImageView editCoffee;
     Button btnJar, btnReview;
     int CoffeeId;
-    private int[] colorArray = new int[]{R.color.one, R.color.two, R.color.three ,R.color.four,R.color.five};
+    int colorId;
+    private int[] color_list;
 
 
     @Override
@@ -28,6 +35,9 @@ public class OpenCoffee extends AppCompatActivity {
         CoffeeId = Integer.parseInt(getIntent().getStringExtra("COFFEE_ID"));
         setContentView(R.layout.activity_coffee);
         myDb = new DatabaseHelper(this);
+        try{
+            colorId = myDb.getColorIdByCoffeeId(CoffeeId);
+        }catch (Exception e){colorId = 0;}
 
         coffeeName = findViewById(R.id.coffeeName);
         coffeeChart = findViewById(R.id.coffeeChart);
@@ -37,6 +47,8 @@ public class OpenCoffee extends AppCompatActivity {
         editCoffee = findViewById(R.id.editBtn);
         btnJar = findViewById(R.id.btnJar);
         btnReview = findViewById(R.id.btnReview);
+
+        color_list = getResources().getIntArray(R.array.color_list);
 
         fillInfo(CoffeeId);
         editCoffee(CoffeeId);
@@ -109,13 +121,12 @@ public class OpenCoffee extends AppCompatActivity {
 
     public void fillInfo(int pos){
         String [] names = getTitles(viewLog(pos));
-        int colorPos = pos % colorArray.length;
 
         coffeeName.setText(names[0]);
         coffeeOrigin.setText(names[1]);
         coffeeProcess.setText(names[2]);
         roastDate.setText(names[3]);
-        coffeeName.setBackgroundResource(colorArray[colorPos]);
+        coffeeName.setBackgroundColor(color_list[colorId]);
     }
 
     public Cursor viewLog(int pos) {

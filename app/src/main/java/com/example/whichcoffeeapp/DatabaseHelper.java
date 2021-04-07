@@ -304,4 +304,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return true;
     }
+    public int getColorIdByCoffeeId(int cId) {
+        String [] args= {Integer.toString(cId)};
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT c.color FROM COLOR c WHERE CoffeeId = ? ",args);
+        res.moveToFirst();
+        int id = res.getInt(0);
+        res.close();
+        return id;
+    }
 }

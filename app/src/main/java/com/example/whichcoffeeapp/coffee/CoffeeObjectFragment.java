@@ -1,4 +1,4 @@
-package com.example.whichcoffeeapp;
+package com.example.whichcoffeeapp.coffee;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,15 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.whichcoffeeapp.R;
+
 public class CoffeeObjectFragment extends Fragment {
     public static final String CNAME = "name";
     public static final String ORIGIN = "origin";
     public static final String RDATE = "rDate";
     public static final String PROCESS = "process";
     public static final String POSITION = "position";
+    public static final String COLORID = "colorId";
+
 
     TextView coffeeName,coffeeChart,coffeeOrigin,coffeeProcess,roastDate;
-    private int[] colorArray = new int[]{R.color.one, R.color.two, R.color.three ,R.color.four,R.color.five};
+    int colorId;
+    private int[] color_list;
+
 
 
     @Nullable
@@ -37,6 +43,7 @@ public class CoffeeObjectFragment extends Fragment {
         String process = args.getString(PROCESS);
         String rDate = args.getString(RDATE);
         int position = args.getInt(POSITION);
+        int colorId = args.getInt(COLORID);
 
 
         coffeeName = view.findViewById(R.id.coffeeName);
@@ -50,8 +57,9 @@ public class CoffeeObjectFragment extends Fragment {
         coffeeProcess.setText(process);
         roastDate.setText(rDate);
 
-       int colorPos = (int)(Math.random() * 5);
-        coffeeName.setBackgroundResource(colorArray[colorPos]);
+        color_list = getResources().getIntArray(R.array.color_list);
+
+        coffeeName.setBackgroundColor(color_list[colorId]);
 
 
         int finalPos = position;
